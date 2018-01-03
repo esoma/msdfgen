@@ -14,6 +14,8 @@
  * operation on the triplet of sampled distance field values.
  *
  */
+ 
+#include "shared.h"
 
 #include "core/arithmetics.hpp"
 #include "core/Vector2.h"
@@ -29,22 +31,22 @@
 namespace msdfgen {
 
 /// Generates a conventional single-channel signed distance field.
-void generateSDF(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
+MSDFGEN_SHARED void generateSDF(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
 
 /// Generates a single-channel signed pseudo-distance field.
-void generatePseudoSDF(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
+MSDFGEN_SHARED void generatePseudoSDF(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
 
 /// Generates a multi-channel signed distance field. Edge colors must be assigned first! (see edgeColoringSimple)
-void generateMSDF(Bitmap<FloatRGB> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate, double edgeThreshold = 1.00000001);
+MSDFGEN_SHARED void generateMSDF(Bitmap<FloatRGB> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate, double edgeThreshold = 1.00000001);
 
 // Original simpler versions of the previous functions, which work well under normal circumstances, but cannot deal with overlapping contours.
-void generateSDF_v1(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
-void generatePseudoSDF_v1(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
-void generateMSDF_v1(Bitmap<FloatRGB> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate, double edgeThreshold = 1.00000001);
+MSDFGEN_SHARED void generateSDF_v1(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
+MSDFGEN_SHARED void generatePseudoSDF_v1(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
+MSDFGEN_SHARED void generateMSDF_v1(Bitmap<FloatRGB> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate, double edgeThreshold = 1.00000001);
 
 // Pre-fill-rule versions.
-void generateSDF_v2(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
-void generatePseudoSDF_v2(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
-void generateMSDF_v2(Bitmap<FloatRGB> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate, double edgeThreshold = 1.00000001);
+MSDFGEN_SHARED void generateSDF_v2(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
+MSDFGEN_SHARED void generatePseudoSDF_v2(Bitmap<float> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate);
+MSDFGEN_SHARED void generateMSDF_v2(Bitmap<FloatRGB> &output, const Shape &shape, double range, const Vector2 &scale, const Vector2 &translate, double edgeThreshold = 1.00000001);
 
 }

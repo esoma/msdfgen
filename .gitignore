@@ -13,3 +13,4 @@ render.png
 out/
 out-*/
 build_xcode/
+build/

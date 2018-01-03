@@ -1,13 +1,15 @@
 
 #pragma once
 
+#include "shared.h"
+
 #include <vector>
 #include "EdgeHolder.h"
 
 namespace msdfgen {
 
 /// A single closed contour of a shape.
-class Contour {
+class MSDFGEN_SHARED Contour {
 
 public:
     /// The sequence of edges that make up the contour.

@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "shared.h"
+
 #include "Vector2.h"
 #include "SignedDistance.h"
 #include "EdgeColor.h"
@@ -12,7 +14,7 @@ namespace msdfgen {
 #define MSDFGEN_CUBIC_SEARCH_STEPS 4
 
 /// An abstract edge segment.
-class EdgeSegment {
+class MSDFGEN_SHARED EdgeSegment {
 
 public:
     EdgeColor color;
@@ -63,7 +65,7 @@ public:
 };
 
 /// A line segment.
-class LinearSegment : public EdgeSegment {
+class MSDFGEN_SHARED LinearSegment : public EdgeSegment {
 
 public:
     Point2 p[2];
@@ -85,7 +87,7 @@ public:
 };
 
 /// A quadratic Bezier curve.
-class QuadraticSegment : public EdgeSegment {
+class MSDFGEN_SHARED QuadraticSegment : public EdgeSegment {
 
 public:
     Point2 p[3];
@@ -107,7 +109,7 @@ public:
 };
 
 /// A cubic Bezier curve.
-class CubicSegment : public EdgeSegment {
+class MSDFGEN_SHARED CubicSegment : public EdgeSegment {
 
 public:
     Point2 p[4];

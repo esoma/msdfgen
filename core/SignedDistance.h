@@ -1,10 +1,12 @@
 
 #pragma once
 
+#include "shared.h"
+
 namespace msdfgen {
 
 /// Represents a signed distance and alignment, which together can be compared to uniquely determine the closest edge segment.
-class SignedDistance {
+class MSDFGEN_SHARED SignedDistance {
 
 public:
     static const SignedDistance INFINITE;

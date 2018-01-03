@@ -1,12 +1,14 @@
 
 #pragma once
 
+#include "shared.h"
+
 #include "edge-segments.h"
 
 namespace msdfgen {
 
 /// Container for a single edge of dynamic type.
-class EdgeHolder {
+class MSDFGEN_SHARED EdgeHolder {
 
 public:
     EdgeHolder();

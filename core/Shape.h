@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "shared.h"
+
 #include <vector>
 #include "Contour.h"
 
@@ -14,7 +16,7 @@ namespace msdfgen {
     };
 
 /// Vector shape representation.
-class Shape {
+class MSDFGEN_SHARED Shape {
 
 public:
     /// The list of contours the shape consists of.

@@ -1,6 +1,8 @@
 
 #pragma once
 
+#include "shared.h"
+
 #include <cstdlib>
 #include <cmath>
 
@@ -11,7 +13,7 @@ namespace msdfgen {
 * Implementation based on the Vector2 template from Artery Engine.
 * @author Viktor Chlumsky
 */
-struct Vector2 {
+struct MSDFGEN_SHARED Vector2 {
 
     static double Epsilon;
     
